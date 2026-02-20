@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - CONSTRUCTORA VALPA</title>
+    <link rel="icon" type="image/png" href="imagenes/logoValpa.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="index.html">
+</head>
+
+<body>
+    <!-- Header/Menú -->
+    <header class="header-simple">
+        <div class="menu container">
+            <a href="index.html" class="logo">VALPA PROPERTY INC.</a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="imagenes/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                    <li><a href="proyectos.html" class="active">Proyectos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Título de la página -->
+    <section class="proyectos-hero">
+        <div class="container">
+            <h1>Nuestros Proyectos</h1>
+            <p>Conoce algunos de los trabajos más destacados que hemos realizado <br>
+                Si quieres ver más,visita nuestro Instagram @constructoravalpa</p>
+        </div>
+    </section>
+
+
+    <!--------------------------- Galería de Proyectos-------------------------->
+    <section class="proyectos-galeria">
+        <div class="container">
+
+            <!-- Proyecto 1 -->
+            <div class="proyecto-card">
+                <div class="proyecto-imagen">
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="imagenes/laSalle1.jpeg" alt="Proyecto 1 - Foto 1" class="slide active">
+                            <img src="imagenes/laSalle1.1.jpeg" alt="Proyecto 1 - Foto 2" class="slide">
+                            <img src="imagenes/laSslle1.2.jpeg" alt="Proyecto 1 - Foto 3" class="slide">
+                            <img src="imagenes/laSslle1.3.jpeg" alt="Proyecto 1 - Foto 4" class="slide">
+                            <img src="imagenes/laSslle1.4.jpeg" alt="Proyecto 1 - Foto 5" class="slide">
+                            <img src="imagenes/laSslle1.5.jpeg" alt="Proyecto 1 - Foto 6" class="slide">
+                            <img src="imagenes/laSslle1.6.jpeg" alt="Proyecto 1 - Foto 7" class="slide">
+                        </div>
+                        <button class="slider-btn prev" onclick="cambiarSlide(this, -1)">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next" onclick="cambiarSlide(this, 1)">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="proyecto-overlay">
+                        <span class="proyecto-categoria">Educación</span>
+                    </div>
+                </div>
+                <div class="proyecto-info">
+                    <h3>Remodelación Universidad La Salle - CDMX</h3>
+                    <p class="proyecto-ubicacion"><i class="fa-solid fa-location-dot"></i> Ciudad de México</p>
+                    <p class="proyecto-descripcion">
+                        Remodelación, mantenimiento y obra desde 1994.
+                    </p>
+                    <div class="proyecto-detalles">
+                        <!--<span><i class="fa-solid fa-calendar"></i> 2023</span> --->
+                        <!---<span><i class="fa-solid fa-ruler-combined"></i> 3,500 m²</span> -->
+                        <span><i class="fa-solid fa-images"></i> 7 fotos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="proyecto-card">
+                <div class="proyecto-imagen">
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="imagenes/Staedtler2.jpeg" alt="Proyecto 2 - Foto 1" class="slide active">
+                            <img src="imagenes/Staedtler2.1.jpeg" alt="Proyecto 2 - Foto 2" class="slide">
+                            <img src="imagenes/Staedtler2.2.jpeg" alt="Proyecto 2 - Foto 3" class="slide">
+                            <img src="imagenes/Staedtler2.3.jpeg" alt="Proyecto 2 - Foto 4" class="slide">
+                        </div>
+                        <button class="slider-btn prev" onclick="cambiarSlide(this, -1)">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next" onclick="cambiarSlide(this, 1)">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="proyecto-overlay">
+                        <span class="proyecto-categoria">Industrial</span>
+                    </div>
+                </div>
+                <div class="proyecto-info">
+                    <h3>Planta Staedtler – Lerma, Edo. Méx</h3>
+                    <p class="proyecto-ubicacion"><i class="fa-solid fa-location-dot"></i> Estado de México</p>
+                    <p class="proyecto-descripcion">
+                        Mantenimiento integral desde 2011: pintura, electricidad, impermeabilización, drenajes y
+                        desazolves.
+                    </p>
+                    <div class="proyecto-detalles">
+                        <span><i class="fa-solid fa-calendar"></i> 2011</span>
+                        <!---<span><i class="fa-solid fa-ruler-combined"></i> 8,000 m²</span>-->
+                        <span><i class="fa-solid fa-images"></i> 6 fotos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 3 -->
+            <div class="proyecto-card">
+                <div class="proyecto-imagen">
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="imagenes/proyecto3.jpeg" alt="Proyecto 3 - Foto 1" class="slide active">
+                            <img src="imagenes/proyecto3.1.jpeg" alt="Proyecto 3 - Foto 2" class="slide">
+                            <img src="imagenes/proyecto3.2.jpeg" alt="Proyecto 3 - Foto 3" class="slide">
+                            <img src="imagenes/proyecto3.3.jpeg" alt="Proyecto 3 - Foto 3" class="slide">
+                            <img src="imagenes/proyecto3.4.jpeg" alt="Proyecto 3 - Foto 3" class="slide">
+
+                        </div>
+                        <button class="slider-btn prev" onclick="cambiarSlide(this, -1)">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next" onclick="cambiarSlide(this, 1)">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="proyecto-overlay">
+                        <span class="proyecto-categoria">Industrial</span>
+                    </div>
+                </div>
+                <div class="proyecto-info">
+                    <h3>FRISA – Naves Industriales, Tijuana, B.C.</h3>
+                    <p class="proyecto-ubicacion"><i class="fa-solid fa-location-dot"></i> Tijuana</p>
+                    <p class="proyecto-descripcion">
+                        Impermeabilización y mantenimiento de naves industriales.
+                    </p>
+                    <div class="proyecto-detalles">
+                        <!-- <span><i class="fa-solid fa-calendar"></i> 2023-2024</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i> 12,000 m²</span>-->
+                        <span><i class="fa-solid fa-images"></i> 5 fotos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 4 -->
+            <div class="proyecto-card">
+                <div class="proyecto-imagen">
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="imagenes/proyecto4.jpeg" alt="Proyecto 4 - Foto 1" class="slide active">
+                            <img src="imagenes/proyecto4.1.jpeg" alt="Proyecto 4 - Foto 2" class="slide">
+                            <img src="imagenes/proyecto4.2.jpeg" alt="Proyecto 4 - Foto 3" class="slide">
+                            <img src="imagenes/proyecto4.3.jpeg" alt="Proyecto 4 - Foto 4" class="slide">
+
+                        </div>
+                        <button class="slider-btn prev" onclick="cambiarSlide(this, -1)">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next" onclick="cambiarSlide(this, 1)">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="proyecto-overlay">
+                        <span class="proyecto-categoria">Infraestructura</span>
+                    </div>
+                </div>
+                <div class="proyecto-info">
+                    <h3>Aeropuerto Internacional de Toluca</h3>
+                    <p class="proyecto-ubicacion"><i class="fa-solid fa-location-dot"></i> Estado de México</p>
+                    <p class="proyecto-descripcion">
+                        Impermeabilización en cubiertas y áreas operativas.
+                    </p>
+                    <div class="proyecto-detalles">
+                        <!-- <span><i class="fa-solid fa-calendar"></i> 2024</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i> 5,200 m²</span>-->
+                        <span><i class="fa-solid fa-images"></i> 4 fotos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 5 -->
+            <div class="proyecto-card">
+                <div class="proyecto-imagen">
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="imagenes/proyecto5.jpg" alt="Proyecto 5 - Foto 1" class="slide active">
+
+                        </div>
+                        <button class="slider-btn prev" onclick="cambiarSlide(this, -1)">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next" onclick="cambiarSlide(this, 1)">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="proyecto-overlay">
+                        <span class="proyecto-categoria">Banca</span>
+                    </div>
+                </div>
+                <div class="proyecto-info">
+                    <h3>BBVA Bancomer – Sucursales</h3>
+                    <p class="proyecto-ubicacion"><i class="fa-solid fa-location-dot"></i>Sucursales</p>
+                    <p class="proyecto-descripcion">
+                        Remodelación y adecuación de múltiples sucursales en diversos estados.
+                    </p>
+                    <div class="proyecto-detalles">
+                        <!-- <span><i class="fa-solid fa-calendar"></i> 2023</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i> 15,000 m²</span>-->
+                        <span><i class="fa-solid fa-images"></i> 1 foto</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 6 -->
+            <div class="proyecto-card">
+                <div class="proyecto-imagen">
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="imagenes/texas1.jpeg" alt="Proyecto 6 - Foto 1" class="slide active">
+                            <img src="imagenes/texas2.jpeg" alt="Proyecto 6 - Foto 2" class="slide">
+                            <img src="imagenes/texas3.jpeg" alt="Proyecto 6 - Foto 3" class="slide">
+                            <img src="imagenes/texas4.jpeg" alt="Proyecto 6 - Foto 4" class="slide">
+                            <img src="imagenes/texas5.jpeg" alt="Proyecto 6 - Foto 4" class="slide">
+                            <img src="imagenes/texas6.jpeg" alt="Proyecto 6 - Foto 4" class="slide">
+                            <img src="imagenes/texas7.jpeg" alt="Proyecto 6 - Foto 4" class="slide">
+                            <img src="imagenes/texas8.jpeg" alt="Proyecto 6 - Foto 4" class="slide">
+                        </div>
+                        <button class="slider-btn prev" onclick="cambiarSlide(this, -1)">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next" onclick="cambiarSlide(this, 1)">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="proyecto-overlay">
+                        <span class="proyecto-categoria">Residencial</span>
+                    </div>
+                </div>
+                <div class="proyecto-info">
+                    <h3>Residencias en San Antonio, Texas – USA</h3>
+                    <p class="proyecto-ubicacion"><i class="fa-solid fa-location-dot"></i>USA, Texas</p>
+                    <p class="proyecto-descripcion">
+                        Diseño, administración y construcción de viviendas.
+                    </p>
+                    <div class="proyecto-detalles">
+                        <!--<span><i class="fa-solid fa-calendar"></i> 2024</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i> 4,800 m²</span>-->
+                        <span><i class="fa-solid fa-images"></i> 8 fotos</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Proyecto 7 -->
+            <div class="proyecto-card">
+                <div class="proyecto-imagen">
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="imagenes/mercado1.jpg" alt="Proyecto 7 - Foto 1" class="slide active">
+                            <img src="imagenes/mercado2.jpg" alt="Proyecto 7 - Foto 2" class="slide">
+                            <img src="imagenes/mercado3.jpg" alt="Proyecto 7 - Foto 3" class="slide">
+                        </div>
+                        <button class="slider-btn prev" onclick="cambiarSlide(this, -1)">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next" onclick="cambiarSlide(this, 1)">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="proyecto-overlay">
+                        <span class="proyecto-categoria">Gobierno</span>
+                    </div>
+                </div>
+                <div class="proyecto-info">
+                    <h3>Mercado Tlacoquemécatl – Benito Juárez, CDMX</h3>
+                    <p class="proyecto-ubicacion"><i class="fa-solid fa-location-dot"></i> Ciudad de México</p>
+                    <p class="proyecto-descripcion">
+                        Proyecto, diseño y remodelación integral (Obra Pública).
+                    </p>
+                    <div class="proyecto-detalles">
+                        <!-- <span><i class="fa-solid fa-calendar"></i> 2024</span>
+                        <span><i class="fa-solid fa-ruler-combined"></i> 9,500 m²</span>-->
+                        <span><i class="fa-solid fa-images"></i> 3 fotos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 8 -->
+            <div class="proyecto-card">
+                <div class="proyecto-imagen">
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="imagenes/santafe1.jpg" alt="Proyecto 8 - Foto 1" class="slide active">
+                            <img src="imagenes/santafe2.jpg" alt="Proyecto 8 - Foto 2" class="slide">
+                            <img src="imagenes/santafe3.jpg" alt="Proyecto 8 - Foto 3" class="slide">
+                            <img src="imagenes/santafe4.jpg" alt="Proyecto 8 - Foto 3" class="slide">
+                        </div>
+                        <button class="slider-btn prev" onclick="cambiarSlide(this, -1)">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next" onclick="cambiarSlide(this, 1)">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <div class="slider-dots"></div>
+                    </div>
+                    <div class="proyecto-overlay">
+                        <span class="proyecto-categoria">Habitacional</span>
+                    </div>
+                </div>
+                <div class="proyecto-info">
+                    <h3>Conjunto Habitacional Alcázar – Santa Fe, CDMX</h3>
+                    <p class="proyecto-ubicacion"><i class="fa-solid fa-location-dot"></i>Ciudad de México</p>
+                    <p class="proyecto-descripcion">
+                        Pintura en fachadas — 18,000 m². Renovación de imagen y protección
+                    </p>
+                    <div class="proyecto-detalles">
+                        <!-- <span><i class="fa-solid fa-calendar"></i> 2023</span>-->
+                        <span><i class="fa-solid fa-ruler-combined"></i> 18,000 m²</span>
+                        <span><i class="fa-solid fa-images"></i> 4 fotos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (El mismo que tu index.html) -->
+    <footer class="footer">
+        <section class="ubicacion-section">
+            <div class="ubicacion-content container">
+                <div class="ubicacion-texto">
+                    <h2>Encuéntranos</h2>
+                    <p class="subtitle">Visítanos o contáctanos para discutir tu próximo proyecto.</p>
+
+                    <div class="direccion-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p>AVENIDA DIVISIÓN DEL NORTE 2001, INTERIOR 407, COLONIA SANTA CRUZ ATOYAC<br>Benito
+                                Juárez,C.P 03310<br>Ciudad de México,
+                                CDMX</p>
+                        </div>
+                    </div>
+
+                    <div class="direccion-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p><a href="tel:+525512345678">+52 55 4509 6000</a></p>
+                        </div>
+                    </div>
+
+                    <div class="direccion-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:contacto@valpapropertyinc.com">contacto@valpapropertyinc.com</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ubicacion-mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d20308.435886167077!2d-99.17654723617912!3d19.38103193591428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAVENIDA%20DIVISI%C3%93N%20DEL%20NORTE%202001%2C%20INTERIOR%20407%2C%20COLONIA%20SANTA%20CRUZ%20ATOYAC%20Benito%20Ju%C3%A1rez%2CC.P%2003310%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e1!3m2!1ses-419!2smx!4v1768352712739!5m2!1ses-419!2smx"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer-main">
+            <div class="footer-content container">
+                <div class="footer-column footer-about">
+                    <h3>VALPA PROPERTY INC.</h3>
+                    <p>Años transformando espacios con excelencia. Especialistas en obra civil, mantenimiento e
+                        impermeabilización para el sector institucional y corporativo.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/constructoravalpa"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/constructoravalpa/"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/alfredo-valdivia-3a8798ab/"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#contacto"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column footer-links">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#nosotros">Nosotros</a></li>
+                        <li><a href="index.html#servicios">Servicios</a></li>
+                        <li><a href="proyectos.html">Proyectos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column footer-links">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#">Obra Civil</a></li>
+                        <li><a href="#">Mantenimiento</a></li>
+                        <li><a href="#">Impermeabilización</a></li>
+                        <li><a href="#">Remodelación</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <div class="footer-contact-info">
+                        <p><i class="fa-solid fa-phone"></i> +52 55 4509 6000</p>
+                        <p><i class="fa-solid fa-envelope"></i> <a
+                                href="mailto:constructoravalpa@hotmail.com">constructoravalpa@hotmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>&copy; 2026 <a href="index.html">VALPA PROPERTY INC.</a> | Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        // Inicializar todos los sliders cuando carga la página
+        document.addEventListener('DOMContentLoaded', function () {
+            // Encontrar todos los sliders
+            const sliders = document.querySelectorAll('.slider');
+
+            sliders.forEach(slider => {
+                const slides = slider.querySelectorAll('.slide');
+                const dotsContainer = slider.querySelector('.slider-dots');
+
+                // Crear dots
+                slides.forEach((_, index) => {
+                    const dot = document.createElement('span');
+                    dot.classList.add('dot');
+                    if (index === 0) dot.classList.add('active');
+                    dot.onclick = () => irASlide(slider, index);
+                    dotsContainer.appendChild(dot);
+                });
+            });
+        });
+
+        function cambiarSlide(button, direction) {
+            const slider = button.closest('.slider');
+            const slides = slider.querySelectorAll('.slide');
+            const dots = slider.querySelectorAll('.dot');
+
+            let currentIndex = 0;
+            slides.forEach((slide, index) => {
+                if (slide.classList.contains('active')) {
+                    currentIndex = index;
+                }
+            });
+
+            // Remover active de la slide actual
+            slides[currentIndex].classList.remove('active');
+            dots[currentIndex].classList.remove('active');
+
+            // Calcular nueva posición
+            let newIndex = currentIndex + direction;
+
+            // Loop: si llega al final, vuelve al inicio y viceversa
+            if (newIndex >= slides.length) {
+                newIndex = 0;
+            } else if (newIndex < 0) {
+                newIndex = slides.length - 1;
+            }
+
+            // Activar nueva slide
+            slides[newIndex].classList.add('active');
+            dots[newIndex].classList.add('active');
+        }
+
+        function irASlide(slider, index) {
+            const slides = slider.querySelectorAll('.slide');
+            const dots = slider.querySelectorAll('.dot');
+
+            // Remover todas las clases active
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Activar la slide y dot seleccionados
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+    </script>
+
+
+</body>
+
+</html>
