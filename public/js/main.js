@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const email = document.getElementById("email").value
 
     const { data, error } = await supabaseClient
-      .from("leads")
+      .from("prospectos")
       .insert([{ nombre, telefono, email }])
 
     if (error) {
