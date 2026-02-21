@@ -23,7 +23,15 @@ console.log("Formulario detectado")
 
     const { data, error } = await supabaseClient
       .from("prospectos")
-      .insert([{ nombre, telefono, email, servicio_interes, origen, mensaje }])
+      .insert([
+    {
+      nombre: "PRUEBA",
+      telefono: "123456",
+      servicio_interes: "PRUEBA SERVICIO",
+      origen: "PRUEBA ORIGEN",
+      mensaje: "PRUEBA MENSAJE"
+    }
+  ]);
 
     if (error) {
       console.error(error)
