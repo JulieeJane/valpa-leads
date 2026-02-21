@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("formulario")
 
   if (!form) return
-
+console.log("Formulario detectado")
   form.addEventListener("submit", async (e) => {
     e.preventDefault()
 
@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Error al enviar datos")
     } else {
       alert("Datos enviados correctamente")
+      console.log("Insert result:", data, error)
       form.reset()
     }
   })
