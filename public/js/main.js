@@ -17,10 +17,13 @@ console.log("Formulario detectado")
     const nombre = document.getElementById("nombre").value
     const telefono = document.getElementById("telefono").value
     const email = document.getElementById("email").value
+    const servicio = document.getElementById("servicio_interes").value;
+    const origen = document.getElementById("origen").value;
+    const mensaje = document.getElementById("mensaje").value;
 
     const { data, error } = await supabaseClient
       .from("prospectos")
-      .insert([{ nombre, telefono, email }])
+      .insert([{ nombre, telefono, email, servicio_interes, origen, mensaje }])
 
     if (error) {
       console.error(error)
