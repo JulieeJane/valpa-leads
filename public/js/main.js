@@ -25,11 +25,11 @@ console.log("Formulario detectado")
       .from("prospectos")
       .insert([
     {
-      nombre: "PRUEBA",
-      telefono: "123456",
-      servicio_interes: "PRUEBA SERVICIO",
-      origen: "PRUEBA ORIGEN",
-      mensaje: "PRUEBA MENSAJE"
+  nombre: nombre,
+  telefono: telefono,
+  servicio_interes: servicio,
+  origen: origen,
+  mensaje: mensaje
     }
   ]);
 
