@@ -4,7 +4,7 @@ const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 
 window.supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey)
 
-
+console.log("VERSION NUEVA JS 2026"); // verificación de la nueva version js 25/02/2026
 // 🔹 2. Escuchar envío del formulario
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("formulario")
