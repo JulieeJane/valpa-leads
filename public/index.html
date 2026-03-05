@@ -171,7 +171,7 @@
             <h2>O llena este formulario</h2>
             <p>Déjanos tus datos y nos pondremos en contacto contigo lo antes posible.</p>
             
-            <form action="scripts/guardar_prospecto.php" method="POST">
+            <form id="formulario">
                 <div class="form-group">
                     <label for="nombre">
                         <i class="fa-solid fa-user"></i>
@@ -196,6 +196,7 @@
                         </label>
                         <input type="tel" id="telefono" name="telefono" placeholder="Ej. 55 1234 5678" required>
                     </div>
+                    <input type="text" name="empresa" style="display:none"> <!--este es un honeypot oculto para evitar el spam-->
                 </div>
 
                 <div class="form-group">
@@ -280,7 +281,7 @@
                         <i class="fa-solid fa-envelope"></i>
                         <div>
                             <h3>Email</h3>
-                            <p><a href="mailto:constructoravalpa@hotmail.com">contacto@valpapropertyinc.com</a></p>
+                            <p><a href="mailto:constructoravalpa@hotmail.com">constructoravalpa@hotmail.com</a></p>
                         </div>
                     </div>
 
@@ -377,7 +378,8 @@
             window.location.href="http://localhost/SITIO VALPA"
         }
     </script> ---->
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>
