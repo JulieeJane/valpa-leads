@@ -8,53 +8,45 @@ window.supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey)
 alert("ESTE ES EL NUEVO LOCAL");
 
 console.log("VERSION NUEVA JS 2026"); // verificación de la nueva version js 25/02/2026
+
 // 🔹 2. Escuchar envío del formulario
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("formulario")
-
-  if (!form) return
-
-  console.log("Formulario detectado")
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault()
 
 
-    const nombre = document.getElementById("nombre").value
-    const telefono = document.getElementById("telefono").value
-    const email = document.getElementById("email").value
-    const servicio = document.getElementById("servicio_interes").value;
-    const origen = document.getElementById("origen").value;
-    const mensaje = document.getElementById("mensaje").value;
+const form = document.getElementById("formulario")
 
-    //lineas de prueba para corergir el email y no mande null 
-    console.log("INPUT:", emailInput);
-    console.log("VALUE:", emailInput.value);
+console.log("Formulario detectado")
+form.addEventListener("submit", async (e) => {
+  e.preventDefault()
+
+  console.log("Submit detectado");
+
+  const nombre = document.getElementById("nombre").value
+  const telefono = document.getElementById("telefono").value
+  const email = document.getElementById("email").value
+  const servicio = document.getElementById("servicio_interes").value;
+  const origen = document.getElementById("origen").value;
+  const mensaje = document.getElementById("mensaje").value;
 
 
-    const { data, error } = await supabaseClient
-      .from("prospectos")
-      .insert([
-        {
-          nombre: nombre,
-          telefono: telefono,
-          email: email,
-          servicio_interes: servicio,
-          origen: origen,
-          mensaje: mensaje
-        }
-      ]);
+  const { data, error } = await supabaseClient
+    .from("prospectos")
+    .insert([
+      {
+        nombre: nombre,
+        telefono: telefono,
+        email: email,
+        servicio_interes: servicio,
+        origen: origen,
+        mensaje: mensaje
+      }
+    ]);
 
-    if (error) {
-      console.error(error)
-      alert("Error al enviar datos")
-    } else {
-      alert("Datos enviados correctamente")
-      console.log("Insert result:", data, error)
-      form.reset()
-    }
-  })
-
-  if (document.querySelector('input[name="empresa"]').value !== "") {
-    return; // es bot
+  if (error) {
+    console.error(error)
+    alert("Error al enviar datos")
+  } else {
+    alert("Datos enviados correctamente")
+    console.log("Insert result:", data, error)
+    form.reset()
   }
 })
