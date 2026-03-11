@@ -5,7 +5,7 @@ const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 window.supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey)
 
 
-alert("ESTE ES EL NUEVO LOCAL");
+//alert("ESTE ES EL NUEVO LOCAL");
 
 console.log("VERSION NUEVA JS 2026"); // verificación de la nueva version js 25/02/2026
 

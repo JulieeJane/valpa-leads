@@ -18,6 +18,13 @@
     <!--este será nuestro header (o encabezado) :)-->
     <header class="header">
         <!--este es lo que contiene el menú-->
+
+        <video autoplay muted loop playsinline class="header-video">
+            <source src="imagenes/VIDEO FONDO3.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+        <div class="header-overlay"></div>
+
         <div class="menu container">
             <a href="#" class="logo">VALPA PROPERTY INC.</a>
             <input type="checkbox" id="menu" />
@@ -44,7 +51,7 @@
                 <a href="#contacto" class="btn-1">Cotizar ahora</a>
             </div>
             <div class="header-img">
-                <img src="imagenes/architect-78.png" alt="" width="500px" height="400px">
+                <!--<img src="imagenes/architect-78.png" alt="" width="500px" height="400px">-->
             </div>
         </div>
     </header>
@@ -106,52 +113,112 @@
                 </div>
             </div>
     </section>
-    <!--Sección nueva: servicios :)-->
-    <!--Este también será el contenido principal de la página-->
+    <!----------------------------------Sección nueva: servicios :)------------------------------>
+    <!--------------Este también será el contenido principal de la página-->
+
     <main class="servicios">
-
         <h2>Servicios</h2>
-        <div class="servicios-content container" id="servicios">
+        <div class="servicios-carousel-wrapper">
+            <button class="carousel-btn prev-btn" onclick="moveCarousel(-1)">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
 
-            <div class="servicio-1">
-                <div class="servicio-img">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=500" alt="Obra Civil">
-                </div>
-                <div class="servicio-info">
-                    <i class="fa-solid fa-helmet-safety"></i>
-                    <h3>Ingeniería de costos</h3>
-                    <p>Ingeniería de costos y dirección de proyectos.</p>
+            <div class="servicios-carousel container" id="servicios">
+                <div class="servicios-content">
+
+                    <!-- Servicio 1 -->
+                    <div class="servicio-1">
+                        <div class="servicio-img">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop"
+                                alt="Ingeniería de costos">
+                        </div>
+                        <div class="servicio-info">
+                            <i class="fa-solid fa-helmet-safety"></i>
+                            <h3>Ingeniería de costos</h3>
+                            <p>Ingeniería de costos y dirección de proyectos.</p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 2 -->
+                    <div class="servicio-1">
+                        <div class="servicio-img">
+                            <img src="https://images.unsplash.com/photo-1716037991590-c975184b37df?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Supervisión">
+                        </div>
+                        <div class="servicio-info">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <h3>Supervisión</h3>
+                            <p>Supervisión y control presupuestal.</p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 3 -->
+                    <div class="servicio-1">
+                        <div class="servicio-img">
+                            <img src="https://images.unsplash.com/photo-1589325999888-06f95cc11f61?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Mantenimiento">
+                        </div>
+                        <div class="servicio-info">
+                            <i class="fa-solid fa-droplet"></i>
+                            <h3>Mantenimiento</h3>
+                            <p>Mantenimiento y remodelación de edificios.</p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 4 -->
+                    <div class="servicio-1">
+                        <div class="servicio-img">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=500&fit=crop"
+                                alt="Recubrimiento de edificios">
+                        </div>
+                        <div class="servicio-info">
+                            <i class="fa-solid fa-building"></i>
+                            <h3>Recubrimiento de edificios</h3>
+                            <p>Recubrimientos y acabados para fachadas y exteriores.</p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 5 -->
+                    <div class="servicio-1">
+                        <div class="servicio-img">
+                            <img src="https://images.unsplash.com/photo-1639563722312-11bc9a31ee34?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Reforzamiento estructural">
+                        </div>
+                        <div class="servicio-info">
+                            <i class="fa-solid fa-bridge"></i>
+                            <h3>Reforzamiento estructural</h3>
+                            <p>Refuerzo y rehabilitación de estructuras existentes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 6 -->
+                    <div class="servicio-1">
+                        <div class="servicio-img">
+                            <img src="https://images.unsplash.com/photo-1673297821205-e0575bbc2ab7?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Impermeabilización">
+                        </div>
+                        <div class="servicio-info">
+                            <i class="fa-solid fa-umbrella"></i>
+                            <h3>Impermeabilización</h3>
+                            <p>Sistemas de impermeabilización para techos y azoteas.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <!--todos estos iconos serán por haber descargado font awesome-->
-            <!--servicio 2-->
-            <div class="servicio-1">
 
-                <div class="servicio-img">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500" alt="Mantenimiento">
-                </div>
-                <div class="servicio-info">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                    <h3>Supervisión</h3>
-                    <p>Supervisión y control presupuestal.</p>
-                </div>
-            </div>
+            <button class="carousel-btn next-btn" onclick="moveCarousel(1)">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
 
-            <!--servicio 3-->
-            <div class="servicio-1">
-                <!--ícono-->
-                <div class="servicio-img">
-                    <img src="https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=500"
-                        alt="Impermeabilización">
-                </div>
-                <div class="servicio-info">
-                    <i class="fa-solid fa-droplet"></i>
-                    <h3>Mantenimiento</h3>
-                    <p>Mantenimiento y remodelación de edificios.</p>
-                </div>
-            </div>
+        <!-- Indicadores del carrusel -->
+        <div class="carousel-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+        </div>
     </main>
-    <!-----Esta sección será para el enlace a whatsapp------->
+    <!----------------------Esta sección será para el enlace a whatsapp--------------------->
     <section class="formulario container" id="contacto">
         <div class="whatsapp-container">
             <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
@@ -170,7 +237,7 @@
             <i class="fa-solid fa-envelope form-icon"></i>
             <h2>O llena este formulario</h2>
             <p>Déjanos tus datos y nos pondremos en contacto contigo lo antes posible.</p>
-            
+
             <form id="formulario">
                 <div class="form-group">
                     <label for="nombre">
@@ -196,7 +263,8 @@
                         </label>
                         <input type="tel" id="telefono" name="telefono" placeholder="Ej. 55 1234 5678" required>
                     </div>
-                    <input type="text" name="empresa" style="display:none"> <!--este es un honeypot oculto para evitar el spam-->
+                    <input type="text" name="empresa" style="display:none">
+                    <!--este es un honeypot oculto para evitar el spam-->
                 </div>
 
                 <div class="form-group">
@@ -238,12 +306,13 @@
                         <i class="fa-solid fa-message"></i>
                         Cuéntanos sobre tu proyecto
                     </label>
-                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe brevemente tu proyecto, necesidades o consulta..." required></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="5"
+                        placeholder="Describe brevemente tu proyecto, necesidades o consulta..." required></textarea>
                 </div>
 
                 <button type="submit" class="btn-submit">
                     <i class="fa-solid fa-paper-plane"></i>
-                    Enviar 
+                    Enviar
                 </button>
             </form>
         </div>
@@ -273,7 +342,7 @@
                         <i class="fa-solid fa-phone"></i>
                         <div>
                             <h3>Teléfono</h3>
-                            <p><a href="tel:+525512345678">+52 55 4509 6000</a></p>
+                            <p><a href="tel:+525545096000">+52 55 4509 6000</a></p>
                         </div>
                     </div>
 
@@ -343,6 +412,8 @@
                         <li><a href="#">Impermeabilización</a></li>
                         <li><a href="#">Remodelación</a></li>
                         <li><a href="#">Instalaciones</a></li>
+                        <li><a href="#">Reforzamiento de estructura</a></li>
+                        <li><a href="#">Recubrimiento de edificios</a></li>
                     </ul>
                 </div>
 
@@ -369,18 +440,71 @@
     </footer>
 
 
-    <!--------- <?php
-    include("send.php");
-    ?>
 
+    <!-------------------script PARA CONEXIÓN A SUPABASE---->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/main.js"></script>
+
+    <!--------------------------------SCRIPT PARA EL CARRUSEL DE SERVICIOS--------------->
     <script>
-        function myFunction(){
-            window.location.href="http://localhost/SITIO VALPA"
-        }
-    </script> ---->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="js/main.js"></script>
+        let currentSlide = 0;
+        const servicesPerView = getServicesPerView();
+        const totalServices = document.querySelectorAll('.servicio-1').length;
+        const totalSlides = Math.ceil(totalServices / servicesPerView);
 
+        function getServicesPerView() {
+            return window.innerWidth <= 991 ? 1 : 3;
+        }
+
+        function moveCarousel(direction) {
+            const servicesContent = document.querySelector('.servicios-content');
+            const serviceWidth = document.querySelector('.servicio-1').offsetWidth;
+            const gap = 30;
+
+            currentSlide += direction;
+
+            // Limitar el desplazamiento
+            if (currentSlide < 0) {
+                currentSlide = 0;
+            } else if (currentSlide >= totalSlides) {
+                currentSlide = totalSlides - 1;
+            }
+
+            const offset = currentSlide * (serviceWidth + gap) * servicesPerView;
+            servicesContent.style.transform = `translateX(-${offset}px)`;
+
+            updateDots();
+        }
+
+        function goToSlide(slideIndex) {
+            const servicesContent = document.querySelector('.servicios-content');
+            const serviceWidth = document.querySelector('.servicio-1').offsetWidth;
+            const gap = 30;
+
+            currentSlide = slideIndex;
+            const offset = currentSlide * (serviceWidth + gap) * servicesPerView;
+            servicesContent.style.transform = `translateX(-${offset}px)`;
+
+            updateDots();
+        }
+
+        function updateDots() {
+            const dots = document.querySelectorAll('.carousel-dots .dot');
+            dots.forEach((dot, index) => {
+                dot.classList.remove('active');
+                if (index === currentSlide) {
+                    dot.classList.add('active');
+                }
+            });
+        }
+
+        // Recalcular en resize
+        window.addEventListener('resize', () => {
+            currentSlide = 0;
+            document.querySelector('.servicios-content').style.transform = 'translateX(0)';
+            updateDots();
+        });
+    </script>
 </body>
 
 </html>
