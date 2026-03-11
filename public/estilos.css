@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,28 +12,67 @@ html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
-.container{
-max-width: 1100px;
-margin: 0 auto;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.header{
-    background-color: #FAFAFA;
+.header {
+    background-color: #2c3e50;
+    /* Color de respaldo */
     padding: 150px 0 100px 0;
     min-height: 70vh;
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.menu{
+/* Video de fondo */
+.header-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* Overlay oscuro sobre el video */
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 62, 80, 0.6);
+    /* Ajusta la opacidad aquí */
+    z-index: 1;
+}
+
+/* Asegurar que el contenido esté encima del video */
+.header .menu {
+     position: absolute;
+    z-index: 10;
+}
+.header .header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.menu {
     position: absolute;
     top: 0;
     left: 0;
@@ -41,9 +80,10 @@ margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 10;
 }
 
-.menu .navbar ul li{
+.menu .navbar ul li {
     position: relative;
     float: left;
 }
@@ -51,61 +91,69 @@ margin: 0 auto;
 .menu .navbar ul li a{
     font-size: 18px;
     padding: 20px;
-    color: #2c3e50;
+    color: #FFFFFF; /* Cambia a blanco */
     display: block;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.menu .navbar ul li a:hover{
-   color: #ae8535; 
-}  
+.menu .navbar ul li a:hover {
+    color: #ae8535;
+}
 
 .logo{
     font-size: 20px;
     font-weight: 800;
-    color: #2c3e50;
+    color: #FFFFFF; /* Cambia a blanco */
     text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#menu{
-    display: none; 
+#menu {
+    display: none;
 }
 
-.menu-icono{
+.menu-icono {
     width: 25px;
-}   
+}
 
-.menu label{
+.menu label {
     cursor: pointer;
     display: none;
 }
 
-.header-content{
-display: flex;
+.header-content {
+    display: flex;
 }
 
-.header-txt{
+.header-txt {
     width: 50%;
 }
 
-.header-txt h1{
+.header-txt h1 {
+
     line-height: 1;
-    color: #2c3e50;
+    color: #FFFFFF;
+    /* Cambia a blanco */
     text-transform: uppercase;
     font-size: 60px;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    /* Sombra oscura */
 }
+
 
 .header-txt p{
     font-size: 16px;
-    color: #818181;
+    color: #ecf0f1; /* Gris claro */
     margin-bottom: 45px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
-.header-img{
+.header-img {
     width: 50%;
 }
 
-.btn-1{
+.btn-1 {
     display: inline-block;
     padding: 11px 25px;
     background-color: #ae8535;
@@ -113,111 +161,228 @@ display: flex;
     border-radius: 15px;
 }
 
-.about{
+.about {
     padding: 100px 0;
     display: flex;
 }
 
-.about-img{
+.about-img {
     width: 50%;
 }
 
-.about-img img{
+.about-img img {
     width: 500px;
     border-radius: 15px;
 }
 
-.about-txt{
+.about-txt {
     width: 50%;
     margin-left: 25px;
 }
 
-.about-txt h2{
+.about-txt h2 {
     color: #2c3e50;
     font-size: 50px;
     margin-bottom: 15px;
 }
 
-.about-txt h3{
+.about-txt h3 {
     color: #2c3e50;
     font-size: 50px;
     margin-bottom: 15px;
 }
 
-.about-txt p{
+.about-txt p {
     font-size: 16px;
     color: #818181;
 }
 
-.mision-txt{
-padding: 50px 0 100px 0;
-text-align: center;
-background-color: #FAFAFA;
+.mision-txt {
+    padding: 50px 0 100px 0;
+    text-align: center;
+    background-color: #FAFAFA;
 }
 
-.mision-txt h2{
-   color: #2c3e50;
-  font-size: 50px;
-  margin-bottom: 15px; 
-}
-.servicios{
-padding: 50px 0 100px 0;
-text-align: center;
-background-color: #FAFAFA;
+.mision-txt h2 {
+    color: #2c3e50;
+    font-size: 50px;
+    margin-bottom: 15px;
 }
 
-
-.servicios h2{
-  color: #2c3e50;
-  font-size: 50px;
-  margin-bottom: 15px;
+.servicios {
+    padding: 50px 0 100px 0;
+    text-align: center;
+    background-color: #FAFAFA;
+    position: relative;
 }
 
-.servicios-content{
-    margin-top: 55px;
+.servicios h2 {
+    color: #2c3e50;
+    font-size: 50px;
+    margin-bottom: 45px;
+}
+
+/* Wrapper del carrusel */
+.servicios-carousel-wrapper {
+    position: relative;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
-/*--------Esta es para la sección de servicios*/
-.servicio-1{
+/* Contenedor del carrusel */
+.servicios-carousel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.servicios-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 30px;
+}
+
+/* Tarjetas de servicios */
+.servicio-1 {
+    min-width: calc(33.333% - 20px);
     padding: 25px;
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.1);
-    flex-basis: calc(25% - 20px);
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/*color de los iconos de servicios*/
-.servicio-1 i{
-    font-size: 30px;
+.servicio-1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Imágenes de servicios */
+.servicio-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.servicio-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.servicio-1:hover .servicio-img img {
+    transform: scale(1.1);
+}
+
+/* Iconos de servicios */
+.servicio-1 i {
+    font-size: 35px;
     color: #ae8535;
     margin-bottom: 15px;
 }
 
-.servicio-1 h3{
+.servicio-1 h3 {
     font-size: 20px;
     color: #2c3e50;
     text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.servicio-1 p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Botones del carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(174, 133, 53, 0.9);
+    color: #FFFFFF;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn:hover {
+    background-color: #ae8535;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(174, 133, 53, 0.4);
+}
+
+.carousel-btn i {
+    font-size: 20px;
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/* Indicadores (dots) */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.carousel-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+    background-color: #ae8535;
+    width: 30px;
+    border-radius: 6px;
+}
+
+.carousel-dots .dot:hover {
+    background-color: #ae8535;
 }
 
 /*------------esta será la sección de valores-------*/
-.valor-1{
+.valor-1 {
     padding: 25px;
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.1);
     flex-basis: calc(25% - 20px);
 }
 
 /*color de los iconos de valores*/
-.valor-1 i{
+.valor-1 i {
     font-size: 30px;
     color: #ae8535;
     margin-bottom: 15px;
 }
 
-.valor-1 h3{
+.valor-1 h3 {
     font-size: 20px;
     color: #323232;
     text-transform: capitalize;
 }
+
 /*-----------esta es la parte del formulario-----*/
 /* ========================================= SECCIÓN DE CONTACTO ========================================= */
 .formulario {
@@ -646,7 +811,7 @@ background-color: #FAFAFA;
     text-decoration: underline;
 }
 
-/*Aquí se empieza con hacer responsivo el sitio*/
+/*------------------Aquí se empieza con hacer responsivo el sitio----------*/
 @media (max-width:991px) {
     .container {
         width: 100%;
@@ -654,15 +819,15 @@ background-color: #FAFAFA;
         margin: 0 auto;
     }
 
-    .menu{
+    .menu {
         padding: 20px;
     }
 
-    .menu label{
+    .menu label {
         display: initial;
     }
 
-    .menu .navbar{
+    .menu .navbar {
         position: absolute;
         top: 100%;
         left: 0;
@@ -671,78 +836,104 @@ background-color: #FAFAFA;
         display: none;
     }
 
-    .menu .navbar ul li{
+    .menu .navbar ul li {
         width: 100%;
     }
 
-    #menu:checked ~ .navbar{
+    #menu:checked~.navbar {
         display: initial;
     }
 
-    .header{
+    .header {
         min-height: 0vh;
         padding: 80px 20px 50px 20px;
     }
 
-    .header-content{
+    .header-content {
         flex-direction: column;
     }
 
-    .header-txt{
+    .header-txt {
         text-align: center;
         width: 100%;
         margin-bottom: 25px;
     }
 
-    .header-txt h1{
-        font-size: 40px; /* Reduce el tamaño para el celular */
+    .header-txt h1 {
+        font-size: 40px;
+        /* Reduce el tamaño para el celular */
     }
 
-    .header-img{
+    .header-img {
         width: 100%;
         text-align: center;
     }
 
-    .header-img img{
+    .header-img img {
         width: 100%;
-        max-width: 400px; /* Limita el tamaño máximo */
+        max-width: 400px;
+        /* Limita el tamaño máximo */
     }
 
-    .about{
+    .about {
         padding: 30px 20px;
         flex-direction: column;
     }
 
-    .about-img{
+    .about-img {
         width: 100%;
         order: 2;
         text-align: center;
     }
 
-    .about-img img{
+    .about-img img {
         width: 100%;
         max-width: 400px;
     }
 
-    .about-txt{
+    .about-txt {
         width: 100%;
         margin-left: 0;
         text-align: center;
         margin-bottom: 25px;
     }
 
-    .servicios{
+    .servicios {
         padding: 30px 20px;
     }
 
-    .servicios-content{
-        margin-top: 25px;
-        flex-direction: column;
+    .servicios h2 {
+        font-size: 35px;
     }
 
-    .servicio-1{
-        margin-bottom: 20px;
-        width: 100%;
+    .servicios-content {
+        gap: 20px;
+    }
+
+    .servicio-1 {
+        min-width: 100%;
+        margin-bottom: 0;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .carousel-btn i {
+        font-size: 16px;
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+
+    .servicio-img {
+        height: 180px;
     }
 
     .formulario {
@@ -781,7 +972,7 @@ background-color: #FAFAFA;
     }
 }
 
-    .ubicacion-section {
+.ubicacion-section {
     padding: 50px 20px;
 }
 
