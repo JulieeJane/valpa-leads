@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>CRM de Clientes</title>
+
+    <link rel="stylesheet" href="css/crm.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+
+<body>
+    <!--BARRA DONDE MUESTRA EL BOTÓN PARA CERRAR SESIÓN-->
+    <div class="top-bar">
+
+        <h1>
+            Panel Valpa CRM
+        </h1>
+        <button onclick="logout()">
+            Cerrar sesión
+        </button>
+
+        <!--ESTE ES EL CONTADOR DE CLIENTES / PROSPECTOS -->
+        <div class="stats">
+            <div class="card">
+                <h3>Nuevo</h3>
+                <p id="countNuevo">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Contactado</h3>
+                <p id="countContactado">0</p>
+
+            </div>
+
+            <div class="card">
+                <h3>Cerrado</h3>
+                <p id="countCerrado">0</p>
+            </div>
+        </div>
+    </div>
+
+    <!-----------CREAMOS UN FILTRO POR STATUS-------->>
+    <select id="filtroEstatus" onchange="filtrar()">
+        <option value="Todos">
+            Todos
+        </option>
+        <option value="Nuevo">
+            Nuevo
+        </option>
+        <option value="Contactado">
+            Contactado
+        </option>
+        <option value="Cerrado">
+            Cerrado
+        </option>
+    </select>
+    <!--AQUI ACABA :) -->
+
+    <div class="crm-container"></div>
+    <h1>CONSTRUCTORA VALPA S.A DE C.V - Gestión de clientes</h1>
+
+    <table id="tablaProspectos">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>Servicio</th>
+                <th>Origen</th>
+                <th>Estatus</th>
+                <th>Notas</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+
+    </table>
+
+    <!-------Este será el dashboard de metricas (gráficas)---------------->
+    <div class="dashboard">
+        <h2>Dashboard de Métricas Comerciales</h2>
+
+        <div class="charts">
+            <div class="chart-card">
+                <h3>Clientes por Estatus</h3>
+                <canvas id="graficaEstatus"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h3>Clientes por Servicio</h3>
+                <canvas id="graficaServicio"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>Captación por Mes</h3>
+                <canvas id="graficaMes"></canvas>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+
+        (function () {
+            emailjs.init("d_hlTsgeFcmpHzJM6");
+        })();
+
+    </script>
+    <script src="js/crm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+
+</html>

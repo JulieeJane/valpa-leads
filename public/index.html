@@ -443,6 +443,12 @@
 
     <!-------------------script PARA CONEXIÓN A SUPABASE---->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("d_hlTsgeFcmpHzJM6");
+        })();
+    </script>
     <script src="js/main.js"></script>
 
     <!--------------------------------SCRIPT PARA EL CARRUSEL DE SERVICIOS--------------->
@@ -505,6 +511,8 @@
             updateDots();
         });
     </script>
+
+
 </body>
 
 </html>
